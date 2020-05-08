@@ -1,24 +1,50 @@
 {%load static%}
 <html>
 <head>
-    <title>BLOG</title>
-    <link rel="stylesheet" href="{%static 'css/modelstyle.css'%}">
+    <title>BLOG - t1 introduction</title>
+    <link rel="stylesheet" href="{%static 'modelcss/modelstyle.css'%}">
     <style> 
         @font-face { font-family: 'KyoboHand'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff'); font-weight: normal; font-style: normal; }
         @font-face { font-family: 'netmarbleL'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.1/netmarbleL.woff') format('woff'); font-weight: normal; font-style: normal; }
         @font-face { font-family: 'netmarbleB'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.1/netmarbleB.woff') format('woff'); font-weight: normal; font-style: normal; }
     </style>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 </head>
 <body>
     <div class="header">
-        <h1 id="mainheader" style="font-family:netmarbleB">블로그</h1>
+        <h1 id="mainheader" style="font-family:netmarbleB">sk telecom T1 소개 블로그</h1>
     </div>
-    {%for blog in blogs.all%}
-        <h1>{{blog.title}}</h1>
-        <p>{{blog.pub_date}}</p>
-        <p>{{blog.body}}</p>
+    <div class="blogobject" style="font-family:netmarbleL">
+    {%for comment in intro.all%}
+        <div class="realobject">
+        <h1>{{comment.title}}</h1>
+        <p>{{comment.pub_date}}</p>
+        <p>{{comment.body}}</p>
         <br><br>
+        </div>
     {%endfor%} 
+    </div>
+    <div class="snslink">
+        <a class="snsicon" href="https://www.youtube.com/user/SKTTeam1st" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a class="snsicon" href="https://www.instagram.com/t1lol/" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a class="snsicon" href="https://www.facebook.com/T1LoL" target="_blank">
+            <i class="fab fa-facebook-square"></i>
+        </a>
+        <a class="snsicon" href="https://twitter.com/T1LoL" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a class="snsicon" href="https://www.twitch.tv/team/sktt1" target="_blank">
+            <i class="fab fa-twitch"></i>
+        </a>
+    </div>
 </body>
+<footer style="font-family:netmarbleL">
+    <a href=#><img src="static/img/t1_footerlogo.JPG"/></a>
+    <p>손시온의 블로그</p>
+</footer>
 
 </html>

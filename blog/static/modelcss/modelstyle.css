@@ -3,10 +3,48 @@
 }
 
 .header {
-    background-color:rgb(240, 148, 148);
-    padding:10px;
+    background-image: url("../img/t1_logo.JPG");
+    padding:50px 0px;
+    color: rgb(231, 231, 231);
 }
 
 #mainheader {
     font-size: 60px;
+}
+
+.blogobject {
+    border: 10px solid red;
+    margin:30px 300px;
+    padding: 30px 60px;
+}
+
+.realobject {
+    border: medium dashed rgba(255, 223, 223, 0.5);
+    margin: 30px 0px;
+    border-radius: 10px;
+    padding: 0px 20px;
+}
+
+.snslink {
+    padding:15px;
+    display: inline-block;
+}
+
+.snsicon {
+    color: rgb(252, 180, 180);
+    font-size:25px;
+    margin:20px;
+}
+
+footer {
+    background-color:black;
+    padding:10px;
+    color:rgb(231, 231, 231);
+}
+
+img {
+    width:50px;
+    position:fixed;
+    right:10px;
+    bottom:10px;
 }

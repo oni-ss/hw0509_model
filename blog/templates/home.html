@@ -1,6 +1,24 @@
-{%for blog in blogs.all%}
-    <h1>{{blog.title}}</h1>
-    <p>{{blog.pub_date}}</p>
-    <p>{{blog.body}}</p>
-    <br><br>
-{%endfor%} 
+{%load static%}
+<html>
+<head>
+    <title>BLOG</title>
+    <link rel="stylesheet" href="{%static 'css/modelstyle.css'%}">
+    <style> 
+        @font-face { font-family: 'KyoboHand'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff'); font-weight: normal; font-style: normal; }
+        @font-face { font-family: 'netmarbleL'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.1/netmarbleL.woff') format('woff'); font-weight: normal; font-style: normal; }
+        @font-face { font-family: 'netmarbleB'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.1/netmarbleB.woff') format('woff'); font-weight: normal; font-style: normal; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 id="mainheader" style="font-family:netmarbleB">블로그</h1>
+    </div>
+    {%for blog in blogs.all%}
+        <h1>{{blog.title}}</h1>
+        <p>{{blog.pub_date}}</p>
+        <p>{{blog.body}}</p>
+        <br><br>
+    {%endfor%} 
+</body>
+
+</html>
